@@ -1,0 +1,483 @@
+h3 {
+/* color:rgba(62, 184, 255, 0.899);
+    font-size: 200px; */
+    padding-top: 0%;
+    font-size: 100px;
+        color: #ffffff;
+        text-align: center;
+        -webkit-animation: glow 2s ease-in-out infinite alternate;
+        -moz-animation: glow 2s ease-in-out infinite alternate;
+        animation: glow 2s ease-in-out infinite alternate;
+        padding-left: 0px;
+       z-index: 1;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                   0 0 50px #3b5fae, 0 0 60px #3b5fae, 0 0 70px #3b5fae;
+    }
+    to {
+      text-shadow: 0 0 20px #eeeeee, 0 0 30px #101755, 0 0 40px #101d55, 0 0 50px #71ccfd,
+                   0 0 60px #101755, 0 0 70px #101155, 0 0 80px #0e184e;
+    }
+  }
+ /*Text welcome to hogwarts sclipitor frumusel ^^ */
+
+ /* Overall settings */
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      
+   }
+   
+  body {
+    min-height: 100vh;
+      margin:0;
+      padding:0;
+      background: linear-gradient(#2b1055,#7597de);
+    }
+ /*Pozitia header*/
+  header {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:15px;
+      z-index: 20;
+
+  }
+  /* Section with parralexis images*/
+  section { 
+    
+     position:relative;
+     width: auto;
+     height: 100vh;
+     padding:10vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to top,#202221,transparent);
+    z-index: 10000;
+  }
+
+  section img {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+  }
+
+  section img#moon {
+     mix-blend-mode: screen;
+     z-index: 0;
+  }
+
+  /*Second Div with Name/Age*/
+  .sec {
+      position: relative;
+      padding: 4.5%;
+      background:#202221;
+      text-align: center;
+  }
+
+  section img#stars{
+    -webkit-transform: translateZ(780px) scale(1);
+    transform: translateZ(780px) scale(1);
+    
+    z-index: -1;
+  }
+
+  section img#moon{
+    
+    
+    z-index: 0;
+  }
+   /*TEXT STYLE */
+  h1 {
+    color:#ffffff83;
+    padding-bottom:  1.5%;;
+    padding-top:  1.5%;;
+  }
+
+  h2{
+    color:#ffffff83;
+    padding-bottom: 0.5%;
+  }
+
+  span {
+    color:#ffffff83;
+    font-size: 150%;
+  }
+
+  /*INPUT TEXT*/
+  
+  .Input input{
+    
+    padding: 10px;
+    border: 1px solid rgba(225,225,225,0.25);
+    background:#202221;
+    border-radius: 10px;
+    
+    color:#a8a8a8c2;
+    font-size: 1em;
+
+  }
+
+
+  @media (min-width: 700px) {
+    .Input input {
+      width: 20%;
+    }
+
+    
+    
+    /*
+    .house input{
+      width: 20vh;
+    } 
+    .Griffindor input{
+      width: 20%;
+    }
+    .RavenClaw input{
+      width: 20%;
+    }
+    .Hufflepuf input{
+      width: 20%;
+    }
+    .Slytherin input{
+      width: 20%;
+    } */ 
+    
+  }
+  /*INPUT DATE */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #adadadbb;
+    
+    color: rgb(134, 134, 134);
+  }
+
+  input[type="date"] {
+    
+    color:#868686;
+    font-size: 1.5em;
+  }
+    /*Third Div */
+  .third {
+    background-image: url('images/harrypotterhouses.png'); 
+     background-repeat: no-repeat;
+   
+    height: calc(0.664 * 90vw);    /*  bugu cu inaltimea*/
+    width: auto;
+   background-size:contain;
+    z-index: 1;
+    position:relative;
+    background-size: 100% auto;
+    display: flex;
+    
+  }
+
+  
+
+
+  
+  .third::before{
+    content: '';
+    position: absolute;
+    
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to bottom,#202221,transparent);
+    z-index: 1000;
+  }
+
+
+/*RADIO INPUT FOR HOUSES*/
+
+
+
+input[type="radio"]{
+  display: none;
+
+ 
+}
+
+
+
+label {
+  position: relative;
+  color: #fdd785;
+  font-size: calc(0.664 * 3vw);
+  border:0.5vh  solid #fdd785;
+  border-radius: 1vh;
+  padding:0.5vh 1vh;
+  display: flex;
+}
+
+label:before{
+  margin-top:calc(0.664 * 0.2vw);
+  content: " ";
+  height:  calc(0.664 * 2.75vw);
+  width: calc(0.664 * 2.75vw);
+  border:0.375vh solid #fdd785;
+  border-radius: 50%;
+  margin-right: 2vh;
+  
+}
+
+
+input[type="radio"]:checked + label{
+  background-color: #fdd785;
+  color:#ffffff;
+}
+
+input[type="radio"]:checked + label:before{
+height:  1vh;
+width: 1vh;
+border: calc(0.664 * 1.27vw) solid#ffffff;
+background-color: #fdd785;
+}
+   
+  .Griffindor{
+    position: absolute;
+  transform:translate(-50%,-50%);
+  top:42%;
+  left:25%;
+  
+  }
+
+  .Griffindor:hover{
+    background-color: #ee0e0e7c;
+    border-radius: 1vh;
+    
+  }
+
+
+
+  .Hufflepuf{
+    position: absolute;
+  transform:translate(-50%,-50%);
+    top:60%;
+    left:25%;
+  }
+
+  .Hufflepuf:hover{
+    background-color: #a9ac1a7c;
+    border-radius: 1vh;
+    
+  }
+  .RavenClaw{
+    position: absolute;
+  transform:translate(-50%,-50%);
+  top:60%;
+    left:75%;
+  }
+  .RavenClaw:hover{
+    background-color: #0e55ee7c;
+    border-radius: 1vh;
+    
+  }
+  .Slytherin{
+    position: absolute;
+  transform:translate(-50%,-50%);
+    
+    top:42%;
+  left:75%;
+  }
+  .Slytherin:hover{
+    background-color: #2d85057c;
+    border-radius: 1vh;
+    
+  }
+
+   /*Fourth Div*/
+
+  .fourth {
+    height: 70vh;
+    background-image: url("images/wizzarrd.png");
+    background-size: calc(0.664 * 70vh), auto ;
+    background-repeat: no-repeat;
+    background-blend-mode:screen;
+    /*background-position:33vw 6vh;*/
+    background-position:center;
+    background-color:#202221 ;
+    position: relative;
+    z-index: 100;
+    width: auto;
+    text-align: center;
+  }
+
+  .fourth::before{
+    clear: both;
+    padding:0%;
+    content: '';
+    position: absolute;
+    top: -14%;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to top, #202221, transparent);
+    
+    z-index: 10000;
+  }
+
+ /* */
+
+ input[name="mywand"] {
+  border: 0.5vh solid #fdd785;
+  border-radius: 2vh;
+  font-size: 2vh;
+  color:#03030390;
+  padding: 0.5vh;
+  height:  8vh;
+  width:  auto;
+  background: linear-gradient(to top,#fdd785, #fff );
+}
+
+@media(max-width: 700px) {
+
+  
+  .fourth input[name="mywand"]{
+  height: 8vh;
+  width:  20vh;
+  }
+
+  
+  
+}
+
+.Wood{
+  position: absolute;
+transform:translate(-50%,-50%);
+top:35%;
+left:25%;
+
+}
+
+
+.Core{
+  position: absolute;
+transform:translate(-50%,-50%);
+  
+  top:35%;
+  left:75%;
+}
+
+.Length{
+  position: absolute;
+transform:translate(-50%,-50%);
+top:65%;
+  left:75%;
+}
+
+.Flex{
+  position: absolute;
+transform:translate(-50%,-50%);
+  
+  top:65%;
+  left:25%;
+}
+
+.Pet {
+  position: absolute;
+  transform:translate(-50%,-50%);
+    left:50%;
+    top:85%;
+}
+
+/* 5TH DIV*/
+
+.fifth {
+  height: calc(0.664 * 133vw);
+  width: auto;
+  background-image: url("images/background03.png");
+
+  background-repeat: no-repeat;
+  background-size:contain;
+    z-index: 1;
+    position:relative;
+    background-size: 100% auto;
+    display: flex;
+  /*background-position:33vw 6vh;*/
+  
+  background-color:#202221 ;
+  
+  
+  text-align: center;
+}
+
+.fifth::before{
+  clear: both;
+  padding:0%;
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to bottom, #202221, transparent);
+  
+  z-index: 10000;
+}
+
+textarea{
+  height: calc(0.664 * 60vw);
+  width: calc(0.664 * 40vw);
+  background-size: calc(0.664 * 40vw)  calc(0.664 * 60vw);
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 253, 154, 0.842);
+  border-radius: 4px;
+  background-image: url("images/pn.jpg");
+  color: rgb(22, 20, 20);
+  background-repeat: no-repeat;
+  
+  font-size: 2vw;
+  resize: none;
+  
+  
+ }
+
+ .Abi {
+   height: 20vh;
+   width: auto;
+   top:30%;
+   left: 14%;
+   position:relative;
+   display: flex;
+ }
+
+ .Join{
+  height: 20vh;
+  width: auto;
+  top:30%;
+  left: 32%;
+  position:relative;
+  display: flex;
+ }
+
+ .text {
+   position: relative;
+   top:70%;
+   
+ }
+
+ 
+ 
