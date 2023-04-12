@@ -123,39 +123,20 @@
             <option value="Axolotl">
         </datalist>
           </div>
-          <div class="text">
-      <h1>Only 2 forms to complete and you are ready to go!</h1></div>
+         
     </div>
     <div class="fifth">
      
-      
-      <div class="Abi">
-       
-          <textarea>Special      abillities:</textarea>
-        
-        
-
-        </div>
-        <div class="Join">
-          <textarea>Your reason to     join us:</textarea>
-        </div>
+      <div class="search">
+        <h1>Search about a house</h1>
+        <input type="text" id="search" name="search" placeholder="Ex:Griffindor,Ravenclaw.." class="change"  > 
+        <button for="search" id="myBtn">Search</button>
+      </div>
+      <div id="result"></div>
+     
         
     </div>
   </form>
-    <script>
-
-        let moon = document.getElementById('moon');
-        let stars = document.getElementById('stars');
-        let mage = document.getElementById('mage');
-      window.addEventListener('scroll', function() 
-      {
-          let value = window.scrollY;
-          stars.style.left = value * 0.2 + 'px';
-          if (value <= 500) {
-          moon.style.top = value * 1 + 'px';
-  }
-          
-      })
-    </script>
+    <script src="JS.js"> </script>
 </body>
 </html>

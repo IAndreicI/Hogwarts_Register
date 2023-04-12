@@ -455,29 +455,117 @@ textarea{
   
  }
 
- .Abi {
-   height: 20vh;
-   width: auto;
-   top:30%;
-   left: 14%;
-   position:relative;
-   display: flex;
- }
 
- .Join{
-  height: 20vh;
-  width: auto;
-  top:30%;
-  left: 32%;
-  position:relative;
-  display: flex;
- }
 
- .text {
-   position: relative;
-   top:70%;
-   
- }
-
+ .search {
  
+  position: absolute;
+transform:translate(-50%,-50%);
+  
+  top:35%;
+  left:50%;
+ }
+
+ .search input{
+    
+    height: 3vw;
+    width: 20vw;
+    
+    padding: 2px;
+    border: 1px solid rgba(225,225,225,0.25);
+    background:#2022217a;
+    border-radius: 10px;
+    border-color:#000000;
+    color:#ffffff;
+    font-size: 1.5em;
+    text-shadow:#000000;
+    
+ }
+.search h1 {
+  color:#161616;
+  font-size: 50px;
+  text-shadow:1px  0px 10px rgb(255, 255, 255);
+  
+}
+
+.change::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(255, 255, 255, 0.514);
+}
+.change:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.514);
+  opacity: 1;
+}
+.change::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(255, 255, 255, 0.514);
+  opacity: 1;
+}
+.change:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color:rgba(255, 255, 255, 0.514);
+}
  
+ @media(max-width: 1200px) {
+
+  
+  .search input[name="search"]{
+  height: 5vw;
+  width:  30vw;
+  font-size: 1em;
+  }
+  .search h1{
+    font-size:4vw;
+  }
+  
+}
+button{
+  height: 3vw;
+    width: 5vw;
+    
+    padding: 2px;
+    border: 1px solid rgba(225,225,225,0.25);
+    background:#2022217a;
+    border-radius: 10px;
+    border-color:#000000;
+    color:#ffffff;
+    font-size: 1vw;
+    text-shadow:#000000;
+}
+button:hover {
+  background-color: #f2ff7e7c;
+    border-radius: 1vh;
+}
+
+
+
+.info {
+  position: absolute;
+  transform:translate(-50%,-50%);
+    
+    top:70%;
+    left:50%;
+}
+
+.info h1{
+  color:#fcfcfce7;
+  font-size: 2vw;
+  text-shadow:1px  1px 10px rgb(0, 0, 0);
+ 
+  
+}
+
+.msg {
+  position: absolute;
+  transform:translate(-50%,-50%);
+    
+    top:45%;
+    left:50%;
+}
+
+.msg {
+  color:#fcfcfce7;
+  font-size: 2vw;
+  text-shadow:1px  1px 10px rgb(0, 0, 0);
+}
