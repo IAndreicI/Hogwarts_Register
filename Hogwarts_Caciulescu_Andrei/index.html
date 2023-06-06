@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
 </head>
 <body>
-    <header>
-        <h3>Welcome to <br> Hogwarts</h3>
-    </header>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a hfref="#">Welcome to Hogwarts </a></div>
+       <ul class="links">
+         <li><a href="/index.html">Home</a></li>
+         <li><a href="#fif">Map</a></li>
+         <li><a href="Customize">Customize</a></li>
+         <li class="lg"><a href="/login.html">Log in</a></li>
+       </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+   
+    <div class="dropdown_menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="#fif">Map</a></li>
+      <li><a href="Customize">Customize</a></li>
+      <li><a href="/login.html">Log in</a></li>
+
+    </div>
+
+</header>
     <section style="width: 100%; overflow:hidden ;">
         <img src="images/stars01.png" id="stars">
         <img src="images/moon.png" id="moon">
@@ -20,18 +42,7 @@
     <div class="sec" id="sec">
         <h1>Welcome, young wizzard!</h1>
         <h2>It's the first time I see you around here, may I ask your name?</h2>
-        <div class="Input">
-           
-            <input type="text" required= "required" placeholder="First Name"> 
-           
-            <input type="text" required= "required" placeholder="Last Name"> 
-            
-        </div>
-        <h2>Such a fitting name! I wonder, when were you born?</h2>
-        <div class="Input">
-            <input type="date" required= "required" placeholder="Age"> 
-        <h1>Now, it's time to choose a house:</h1>
-        </div>
+        
     </div>
 
     <div class="third" id="third">
@@ -125,14 +136,9 @@
           </div>
          
     </div>
-    <div class="fifth">
+    <div class="fifth" id="fif">
      
-      <div class="search">
-        <h1>Search about a house</h1>
-        <input type="text" id="search" name="search" placeholder="Ex:Griffindor,Ravenclaw.." class="change"  > 
-        <button for="search" id="myBtn">Search</button>
-      </div>
-      <div id="result"></div>
+     
      
         
     </div>

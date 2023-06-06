@@ -2,7 +2,8 @@ h3 {
 /* color:rgba(62, 184, 255, 0.899);
     font-size: 200px; */
     padding-top: 0%;
-    font-size: 100px;
+    font-size: 1.6rem;
+    padding-left:2%;
         color: #ffffff;
         text-align: center;
         -webkit-animation: glow 2s ease-in-out infinite alternate;
@@ -33,7 +34,122 @@ h3 {
       scroll-behavior: smooth;
       
    }
+   /* Navbar*/
+  .links .lg{
    
+    width:4rem;
+  }
+   a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.4rem;
+   text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.6);
+   }
+
+   a:hover{
+    color:#fdd785; 
+   }
+   
+   .navbar{
+     width: 100%;
+     height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+   
+   }
+   .navbar .links {
+     display:flex;
+     gap:2rem;
+     
+      list-style-type: none;
+  
+     
+     position: absolute;
+     transform:translate(-50%,-50%);
+     top:50%;
+     left:calc(0.3 * 280vw);
+     
+     margin:0;
+     padding:0;
+    
+   }
+
+   @media (max-width:1200px) {
+
+       .navbar .links{
+        left:78%;
+      }
+
+      
+
+   }
+
+   .navbar .logo {
+
+    position: absolute;
+    display: flex;
+    padding-left: 2rem;
+    
+   }
+   .navbar .logo a{
+     font-size: 2rem;
+     text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.6);
+   }
+   
+
+   .navbar .toggle_btn{
+     color: #fff;
+     font-size:  1.6rem;
+     cursor:pointer;
+     transform:translate(-50%,-50%);
+     top:30%;
+     left:92%;
+    
+     position: relative;
+     display:none;
+
+   }
+     .dropdown_menu{
+       position:absolute;
+       right:2rem;
+       top:60px;
+       height: 0;
+       width:170px;
+       background: rgba(0, 0, 0, 0.11);
+       backdrop-filter:blur(15px);
+       border-radius: 10px ;
+       overflow:hidden;
+       transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     }
+     
+     .dropdown_menu.open {
+       height: 200px;
+
+     }
+
+     .dropdown_menu li{
+       padding: 0.7rem;
+       display:flex;
+       align-items: center;
+       justify-content: center;
+     }
+
+
+
+     
+
+    @media (max-width:800px) {
+      .navbar .links{
+        display:none;
+      }
+      
+      .navbar .toggle_btn{
+        display:block;
+      }
+      
+    }
   body {
     min-height: 100vh;
       margin:0;
@@ -93,9 +209,12 @@ h3 {
   /*Second Div with Name/Age*/
   .sec {
       position: relative;
-      padding: 4.5%;
+      padding-bottom: 2%;
       background:#202221;
-      text-align: center;
+      text-align:center;
+      padding-left:8%;
+      padding-right:8%;
+      
   }
 
   section img#stars{
@@ -114,18 +233,30 @@ h3 {
   h1 {
     color:#ffffff83;
     padding-bottom:  1.5%;;
-    padding-top:  1.5%;;
+    padding-top:  2.5%;;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.226);
   }
 
   h2{
     color:#ffffff83;
-    padding-bottom: 0.5%;
+    padding-bottom: 1.5%;
+    text-shadow: 0px 0px 5px rgba(133, 133, 133, 0.562);
   }
 
   span {
     color:#ffffff83;
     font-size: 150%;
   }
+  
+ 
+
+  input:hover[type="submit"] 
+		{
+			background: #fdd785;
+      color:#fff;
+     transition: 1s;
+		}
+
 
   /*INPUT TEXT*/
   
@@ -135,9 +266,9 @@ h3 {
     border: 1px solid rgba(225,225,225,0.25);
     background:#202221;
     border-radius: 10px;
-    
     color:#a8a8a8c2;
-    font-size: 1em;
+    font-size: 1rem;
+    
 
   }
 
@@ -168,17 +299,7 @@ h3 {
     
   }
   /*INPUT DATE */
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    background-color: #adadadbb;
-    
-    color: rgb(134, 134, 134);
-  }
-
-  input[type="date"] {
-    
-    color:#868686;
-    font-size: 1.5em;
-  }
+  
     /*Third Div */
   .third {
     background-image: url('images/harrypotterhouses.png'); 
@@ -437,135 +558,7 @@ transform:translate(-50%,-50%);
   z-index: 10000;
 }
 
-textarea{
-  height: calc(0.664 * 60vw);
-  width: calc(0.664 * 40vw);
-  background-size: calc(0.664 * 40vw)  calc(0.664 * 60vw);
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid rgba(255, 253, 154, 0.842);
-  border-radius: 4px;
-  background-image: url("images/pn.jpg");
-  color: rgb(22, 20, 20);
-  background-repeat: no-repeat;
-  
-  font-size: 2vw;
-  resize: none;
-  
-  
- }
 
 
 
- .search {
  
-  position: absolute;
-transform:translate(-50%,-50%);
-  
-  top:35%;
-  left:50%;
- }
-
- .search input{
-    
-    height: 3vw;
-    width: 20vw;
-    
-    padding: 2px;
-    border: 1px solid rgba(225,225,225,0.25);
-    background:#2022217a;
-    border-radius: 10px;
-    border-color:#000000;
-    color:#ffffff;
-    font-size: 1.5em;
-    text-shadow:#000000;
-    
- }
-.search h1 {
-  color:#161616;
-  font-size: 50px;
-  text-shadow:1px  0px 10px rgb(255, 255, 255);
-  
-}
-
-.change::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: rgba(255, 255, 255, 0.514);
-}
-.change:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(255, 255, 255, 0.514);
-  opacity: 1;
-}
-.change::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(255, 255, 255, 0.514);
-  opacity: 1;
-}
-.change:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color:rgba(255, 255, 255, 0.514);
-}
- 
- @media(max-width: 1200px) {
-
-  
-  .search input[name="search"]{
-  height: 5vw;
-  width:  30vw;
-  font-size: 1em;
-  }
-  .search h1{
-    font-size:4vw;
-  }
-  
-}
-button{
-  height: 3vw;
-    width: 5vw;
-    
-    padding: 2px;
-    border: 1px solid rgba(225,225,225,0.25);
-    background:#2022217a;
-    border-radius: 10px;
-    border-color:#000000;
-    color:#ffffff;
-    font-size: 1vw;
-    text-shadow:#000000;
-}
-button:hover {
-  background-color: #f2ff7e7c;
-    border-radius: 1vh;
-}
-
-
-
-.info {
-  position: absolute;
-  transform:translate(-50%,-50%);
-    
-    top:70%;
-    left:50%;
-}
-
-.info h1{
-  color:#fcfcfce7;
-  font-size: 2vw;
-  text-shadow:1px  1px 10px rgb(0, 0, 0);
- 
-  
-}
-
-.msg {
-  position: absolute;
-  transform:translate(-50%,-50%);
-    
-    top:45%;
-    left:50%;
-}
-
-.msg {
-  color:#fcfcfce7;
-  font-size: 2vw;
-  text-shadow:1px  1px 10px rgb(0, 0, 0);
-}

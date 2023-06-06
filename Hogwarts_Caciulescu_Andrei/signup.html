@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a hfref="#">Welcome to Hogwarts </a></div>
+       <ul class="links">
+         <li><a href="/Hogwarts_Caciulescu_Andrei_Proiect/startpage.html">Home</a></li>
+         <li class="lg"><a href="/Hogwarts_Caciulescu_Andrei_Proiect/login.html">Log in</a></li>
+       </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+   
+    <div class="dropdown_menu">
+      <li><a href="/Hogwarts_Caciulescu_Andrei_Proiect/startpage.html">Home</a></li>
+     
+      <li><a href="/Hogwarts_Caciulescu_Andrei_Proiect/login.html">Log in</a></li>
+
+    </div>
+
+</header>
+    <section style="width: 100%; overflow:hidden ;">
+        <img src="images/stars01.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/background01.png" id="mage">
+    </section>
+    <form action="details_entry.php" method="post" onsubmit="handleChange()">
+    <div class="sec" id="sec">
+        <h1>Nice to see you,  young wizzard!</h1>
+        <h2>How shall I call you?<br></h2>
+        <div class="Input">
+            <div class="username">
+                <input type="text" required= "required" name="usr" placeholder="Username"> 
+            </div>
+            <br>
+            <h2>Where would you like to recive our letters?</h2>
+            <div class="email">
+                <input type="email" name="email" required="required" placeholder="E-mail">
+            </div>
+            
+            <br>
+            <h2>Every wizzard around here has a secret password, what would your's be?</h2>
+            <input type="password" name="pwd" id="pwd" placeholder="Password">
+              <br>
+            <br>
+            <h2>Could you repeat it please? My ears aren't what they used to be.</h2>
+            <input type="password" name="pwd" id="pwd-repeat" placeholder="Repeat password">
+             <br>
+             <br>    <br>
+        <h2>Are you ready to join us?</h2>
+        <div class="submit_button">
+            <input type="submit" name="save" value="Submit">
+        </div>
+             
+        </div>
+
+        
+        
+       
+    </div>
+
+   
+
+    
+    <div class="fifth">
+     
+     
+     
+        
+    </div>
+
+
+
+  </form>
+
+
+    <script src="JS.js"> </script>
+</body>
+</html>
