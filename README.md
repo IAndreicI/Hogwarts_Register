@@ -1,4 +1,3 @@
 # Hogwarts_Register
-This is a personal project for the purpose of testing my html/css and javascript skills and knowledge.
-So far, it contains only a register page with front-end, but in the future i will add back-end, a nav bar and modify 
-some existing elements, such as: choosing the house, i will make it based on a short quiz, wand selection. 
+This is an ongoing project about a simple website with the Harry Potter theme.
+The goal is to apply the new things I learn in html/css/javascrip and php. 
